@@ -32,7 +32,7 @@ console.log(appleJuice);
 const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
 
-const num = Number('23');
+const num = Number('23');//Converts the string 23 to the number 23.
 
 
 // You can create a constant array:
@@ -63,7 +63,7 @@ car = {type:"Volvo", model:"EX60", color:"red"};    // ERROR
 
 // Function declaration.
 
-function calcAge1(birthYear) {
+function calcAge1(birthYear) { // ********** Note this area!!!!
  return 2037 - birthYear;
 }
 
@@ -325,5 +325,33 @@ console.log(jonas);
 // "Jonas has 3 friends, and his best friend is called Michael".
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}.`);
 
+
+
+const jonas = {
+ firstName: 'Jonas',
+ lastName: 'Schmetdmann',
+ birthYear: 1991,
+ job: 'teacher',
+ friends: ['Michael', 'Peter', 'Steven'],
+ hasDriversLicense: true,
+
+ // calcAge: function(birthYear) {
+ //  return 2037 - birthYear;
+ // }
+
+ calcAge: function() {
+  console.log(this);
+    return 2037 - this.birthYear;
+  }
+};
+
+console.log(jonas.calcAge(1991));
+//console.log(jonas['calcAge'](1991));
+
 */
 
+function toCelsius(f) {
+  return (5/9) * (f-32);
+}
+
+let value = toCelsius;
