@@ -348,10 +348,23 @@ const jonas = {
 console.log(jonas.calcAge(1991));
 //console.log(jonas['calcAge'](1991));
 
-*/
 
 function toCelsius(f) {
   return (5/9) * (f-32);
 }
 
 let value = toCelsius;
+*/
+
+function describeCountry(country, population, capitalCity) {
+  return `${country} has ${population} million people and its capital city is ${capitalCity}.`;
+}
+
+const descPortugal = describeCountry('Portugal', 10, 'Lisbon');
+const descGermany = describeCountry('Germany', 83, 'Berlin');
+const descFinland = describeCountry('Finland', 6, 'Helsinki');
+
+console.log(descPortugal,
+  //  descGermany,
+  //   descFinland
+  );
