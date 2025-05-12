@@ -6,7 +6,7 @@ const passTest = true;
 if (passTest) hasDriversLicense = true;
 if (hasDriversLicense) console.log('I can Drive :D');
 
-//const interface = 'Audio';
+const interface = 'Audio';
 //const private = 534;/
 //const if = 23;
 
@@ -62,39 +62,40 @@ const car = {type:"Fiat", model:"500", color:"white"};
 car = {type:"Volvo", model:"EX60", color:"red"};    // ERROR
 
 // Function declaration.
+*/
 
-function calcAge1(birthYear) { // ********** Note this area!!!!
- return 2037 - birthYear;
-}
+// function calcAge1(birthYear) { // ********** Note this area!!!!
+//  return 2037 - birthYear;
+// }
 
-const age1 = calcAge1(1991);
+// const age1 = calcAge1(1991);
  
-// function expression
-const calcAge2 = function (birthYear) {
- return 2037 - birthYear;
-}
-const age2 = calcAge2(1991);
+// // function expression
+// const calcAge2 = function (birthYear) {
+//  return 2037 - birthYear;
+// }
+// const age2 = calcAge2(1994);
 
-console.log(age1, age2);
+// console.log(age1, age2);
 
-// arrow function
+// // arrow function
 
-const calcAge3 = birthYear => 2037 - birthYear;
-const age3 = calcAge3(1991);
-console.log(age3);
+// const calcAge3 = birthYear => 2037 - birthYear;
+// const age3 = calcAge3(1991);
+// console.log(age3);
 
-const yearsUntilRetirement = (birthYear, firstName) => {
- const age =  2037 - birthYear;
- const retirement = 65 - age;
- //return retirement;
- return `${firstName} retires in ${retirement} years`;
-}
+// const yearsUntilRetirement = (birthYear, firstName) => {
+//  const age =  2037 - birthYear;
+//  const retirement = 65 - age;
+//  //return retirement;
+//  return `${firstName} retires in ${retirement} years`;
+// }
 
-console.log(yearsUntilRetirement(1991, 'Jonas'));
-console.log(yearsUntilRetirement(1980, 'Bob'))
-//console.log(`Mr Stephan has ${yearsUntilRetirement(1991)} years till he retires.`);
+// console.log(yearsUntilRetirement(1991, 'Jonas'));
+// console.log(yearsUntilRetirement(1980, 'Bob'))
+// console.log(`Mr Stephan has ${65 - (2037 - 1940)} years till he retires.`);
 
-
+/*
 function cutFruitPieces(fruit) {
  return fruit * 4;
 }
@@ -107,7 +108,7 @@ function fruitProcessor(apples, oranges) {
  return juice;
 }
 console.log(fruitProcessor(2, 3));
-
+*/
 const calcAge = function (birthYear) {
  return 2037 - birthYear;
 }
@@ -115,25 +116,26 @@ const calcAge = function (birthYear) {
 const yearsUntilRetirement = function (birthYear, firstName) {
  const age = calcAge(birthYear);
  const retirement = 65 - age;
+ const retirement2 = age - 65;
 
 if(retirement > 0) {
  console.log( `${firstName} retires in ${retirement} years 😟😟`);
  return retirement;
 }else {
- console.log(`${firstName} has already retired 🎉🎉`);
+ console.log(`${firstName} has already retired ${retirement2} years ago 🎉🎉😀😀.`);
  return -1;
 }
 }
 
 console.log(yearsUntilRetirement(1991, 'Jonas'));
-console.log(yearsUntilRetirement(1950, 'Mike'));
+console.log(yearsUntilRetirement(1910, 'Mike'));
 
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 console.log(calcAverage(3, 4, 5));
 
 //Test 1
 
-let scoreDolphins = calcAverage(44, 23, 71);
+let scoreDolphins = calcAverage(54, 65, 49);
 let scoreKoalas = calcAverage(65, 54, 49);
 console.log(scoreDolphins, scoreKoalas);
 
@@ -148,8 +150,8 @@ const checkWinner = function(avgDolphins, avgKoalas) {
 }
 checkWinner(scoreDolphins, scoreKoalas);
 
-checkWinner(576, 111);
-
+checkWinner(176, 571);
+/*
 //Test 2
 
 scoreDolphins = calcAverage(85, 54, 41);
@@ -157,52 +159,53 @@ scoreKoalas = calcAverage(23, 34, 27);
 
 console.log(scoreDolphins, scoreKoalas);
 checkWinner(scoreDolphins, scoreKoalas);
+*/
+// const friend1 = 'Michael';
 
-const friend1 = 'Michael';
+// const friend2 = 'Steven';
 
-const friend2 = 'Steven';
+// const friend3 = 'Peter';
 
-const friend3 = 'Peter';
+// const friends = ['Michael', 'Steven', 'Peter'];
 
-const friends = ['Michael', 'Steven', 'Peter'];
+// console.log(friends);
 
-console.log(friends);
+// const y = new Array(1991, 1984, 2008, 2020);
 
-const y = new Array(1991, 1984, 2008, 2020);
+// console.log(friends[0]);
 
-console.log(friends[0]);
+// console.log(friends[2]);
 
-console.log(friends[2]);
+// console.log(friends.length);
 
-console.log(friends.length);
+// console.log(friends[friends.length - 1]);
 
-console.log(friends[friends.length - 1]);
+// friends[2] = 'Jay';
+// console.log(friends);
+// // friends = ['Bob', 'Alice'];
 
-friends[2] = 'Jay';
-console.log(friends);
-// friends = ['Bob', 'Alice'];
-
-const firstName = 'Jonas';
-const jonas = ['Jonas', 'Schmetdmann', 2037 - 1991, 'Teacher', friends];
-console.log(jonas);
-console.log(jonas.length);
+// const firstName = 'Jonas';
+// const jonas = ['Jonas', 'Schmetdmann', 2037 - 1991, 'Teacher', friends];
+// console.log(jonas);
+// console.log(jonas.length);
 
 //Exercise
-const calcAge = function (birthYear) {
- return 2037 - birthYear;
-}
-const years = [1990, 1967, 2002, 2010, 2018];
+// const calcAges = function (birthYear) {
+//  return 2037 - birthYear;
+// }
+// const years = [1990, 1967, 2002, 2010, 2018];
 
-const age1 = calcAge(years[0]);
+// const age1 = calcAge(years[0]);
 
-const age2 = calcAge(years[1]);
+// const age2 = calcAge(years[1]);
 
-const age3 = calcAge(years[years.length - 1]);
-console.log(age1, age2, age3);
+// const age3 = calcAge(years[years.length - 1]);
+// console.log(age1, age2, age3);
 
-const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+// const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 
-console.log(ages);
+// console.log(ages);
+
 
 const friends = ['Michael', 'Steven', 'Peter'];
 
@@ -226,7 +229,7 @@ console.log(friends);
 console.log(friends.indexOf('Steven'));//return the value
 console.log(friends.indexOf('Bob'));
 
-friends.push(23);
+friends.push(23);//added the value of 23
 console.log(friends.includes('Steven'));
 console.log(friends.includes('Bob'));
 console.log(friends.includes('23')); //would give false
@@ -236,6 +239,7 @@ if (friends.includes('Steven')) {
  console.log('You have a friend called Steven');
 };
 
+/*
 function calcTip(bill) {
  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
 }
@@ -355,16 +359,49 @@ function toCelsius(f) {
 
 let value = toCelsius;
 */
+// function describeCountry(country, population, capitalCity) {
+//   return `${country} has ${population} million people and its capital city is ${capitalCity}.`;
+// }
 
-function describeCountry(country, population, capitalCity) {
-  return `${country} has ${population} million people and its capital city is ${capitalCity}.`;
-}
+// const descPortugal = describeCountry('Portugal', '10', 'Lisbon');
+// const descGermany = describeCountry('Germany', 83, 'Berlin');
+// const descFinland = describeCountry('Finland', 6, 'Helsinki');
 
-const descPortugal = describeCountry('Portugal', 10, 'Lisbon');
-const descGermany = describeCountry('Germany', 83, 'Berlin');
-const descFinland = describeCountry('Finland', 6, 'Helsinki');
+// console.log(descPortugal);
+// console.log(descGermany);
+// console.log(descFinland);
 
-console.log(descPortugal,
-  //  descGermany,
-  //   descFinland
-  );
+// function describeMe(name, age, originCountry, formerJob, currentJob, formerJobPlace, currentJobPlace) {
+//   return `My name is ${name} a ${age} year old from ${originCountry}. I was a ${formerJob} at ${formerJobPlace} and currently I am a ${currentJob} at ${currentJobPlace}.`;
+// }
+
+// const describeMePersonal = describeMe('Benjamin Nwankwor', '16', 'Nigeria', 'Student', 'Programmer', 'Floridel College', 'Amazon');
+//   console.log(describeMePersonal);
+
+
+// let $let = 27;
+
+// console.log($let);
+
+// const myCountry = {
+//   country: 'Finland',
+//   capital: 'Helsinki',
+//   language: 'finnish',
+//   population: 6,
+//   neighbours: ['Norway', 'Sweden', 'Russia']
+// };
+
+// console.log(
+//   `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`
+// );
+
+// myCountry.population += 2;
+// console.log(myCountry.population);
+
+// myCountry['population'] -= 2;
+// console.log(myCountry.population);
+
+// 
+
+for (let voter = 1; voter <= 50; voter++)
+  console.log(`Voter number ${voter} is currently voting`);
