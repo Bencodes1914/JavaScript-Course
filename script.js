@@ -109,48 +109,48 @@ function fruitProcessor(apples, oranges) {
 }
 console.log(fruitProcessor(2, 3));
 */
-const calcAge = function (birthYear) {
- return 2037 - birthYear;
-}
+// const calcAge = function (birthYear) {
+//  return 2037 - birthYear;
+// }
 
-const yearsUntilRetirement = function (birthYear, firstName) {
- const age = calcAge(birthYear);
- const retirement = 65 - age;
- const retirement2 = age - 65;
+// const yearsUntilRetirement = function (birthYear, firstName) {
+//  const age = calcAge(birthYear);
+//  const retirement = 65 - age;
+//  const retirement2 = age - 65;
 
-if(retirement > 0) {
- console.log( `${firstName} retires in ${retirement} years 😟😟`);
- return retirement;
-}else {
- console.log(`${firstName} has already retired ${retirement2} years ago 🎉🎉😀😀.`);
- return -1;
-}
-}
+// if(retirement > 0) {
+//  console.log( `${firstName} retires in ${retirement} years 😟😟`);
+//  return retirement;
+// }else {
+//  console.log(`${firstName} has already retired ${retirement2} years ago 🎉🎉😀😀.`);
+//  return -1;
+// }
+// }
 
-console.log(yearsUntilRetirement(1991, 'Jonas'));
-console.log(yearsUntilRetirement(1910, 'Mike'));
+// console.log(yearsUntilRetirement(1991, 'Jonas'));
+// console.log(yearsUntilRetirement(1910, 'Mike'));
 
-const calcAverage = (a, b, c) => (a + b + c) / 3;
-console.log(calcAverage(3, 4, 5));
+// const calcAverage = (a, b, c) => (a + b + c) / 3;
+// console.log(calcAverage(3, 4, 5));
 
 //Test 1
 
-let scoreDolphins = calcAverage(54, 65, 49);
-let scoreKoalas = calcAverage(65, 54, 49);
-console.log(scoreDolphins, scoreKoalas);
+// let scoreDolphins = calcAverage(54, 65, 49);
+// let scoreKoalas = calcAverage(65, 54, 49);
+// console.log(scoreDolphins, scoreKoalas);
 
-const checkWinner = function(avgDolphins, avgKoalas) {
- if (avgDolphins >= 2 * avgKoalas) {
-  console.log(`Dolphins win 🏆🏆 (${avgDolphins} vs. ${avgKoalas})`);
- } else if (avgKoalas >= 2 * avgDolphins) {
-  console.log(`Koalas win 🏆🏆 (${avgKoalas} vs. ${avgDolphins})`);
- } else {
-  console.log('No team wins...😢😢');
- }
-}
-checkWinner(scoreDolphins, scoreKoalas);
+// const checkWinner = function(avgDolphins, avgKoalas) {
+//  if (avgDolphins >= 2 * avgKoalas) {
+//   console.log(`Dolphins win 🏆🏆 (${avgDolphins} vs. ${avgKoalas})`);
+//  } else if (avgKoalas >= 2 * avgDolphins) {
+//   console.log(`Koalas win 🏆🏆 (${avgKoalas} vs. ${avgDolphins})`);
+//  } else {
+//   console.log('No team wins...😢😢');
+//  }
+// }
+// checkWinner(scoreDolphins, scoreKoalas);
 
-checkWinner(176, 571);
+// checkWinner(176, 571);
 /*
 //Test 2
 
@@ -207,37 +207,37 @@ checkWinner(scoreDolphins, scoreKoalas);
 // console.log(ages);
 
 
-const friends = ['Michael', 'Steven', 'Peter'];
+// const friends = ['Michael', 'Steven', 'Peter'];
 
- //added the name jay
-const newLength = friends.push('Jay');
-console.log(friends);
-console.log(newLength);
+//  //added the name jay
+// const newLength = friends.push('Jay');
+// console.log(friends);
+// console.log(newLength);
 
-friends.unshift('John');  //Adding an element to the beginning
-console.log(friends);
+// friends.unshift('John');  //Adding an element to the beginning
+// console.log(friends);
 
-//Removing an element
-friends.pop(); //Last element to be removed
-const popped = friends.pop();
-console.log(popped);
-console.log(friends);
+// //Removing an element
+// friends.pop(); //Last element to be removed
+// const popped = friends.pop();
+// console.log(popped);
+// console.log(friends);
 
-friends.shift(); //first element to be removed
-console.log(friends);
+// friends.shift(); //first element to be removed
+// console.log(friends);
 
-console.log(friends.indexOf('Steven'));//return the value
-console.log(friends.indexOf('Bob'));
+// console.log(friends.indexOf('Steven'));//return the value
+// console.log(friends.indexOf('Bob'));
 
-friends.push(23);//added the value of 23
-console.log(friends.includes('Steven'));
-console.log(friends.includes('Bob'));
-console.log(friends.includes('23')); //would give false
-console.log(friends.includes(23)); //would give true
+// friends.push(23);//added the value of 23
+// console.log(friends.includes('Steven'));
+// console.log(friends.includes('Bob'));
+// console.log(friends.includes('23')); //would give false
+// console.log(friends.includes(23)); //would give true
 
-if (friends.includes('Steven')) {
- console.log('You have a friend called Steven');
-};
+// if (friends.includes('Steven')) {
+//  console.log('You have a friend called Steven');
+// };
 
 /*
 function calcTip(bill) {
@@ -329,36 +329,55 @@ console.log(jonas);
 // "Jonas has 3 friends, and his best friend is called Michael".
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}.`);
 
-
-
-const jonas = {
- firstName: 'Jonas',
- lastName: 'Schmetdmann',
- birthYear: 1991,
- job: 'teacher',
- friends: ['Michael', 'Peter', 'Steven'],
- hasDriversLicense: true,
-
- // calcAge: function(birthYear) {
- //  return 2037 - birthYear;
- // }
-
- calcAge: function() {
-  console.log(this);
-    return 2037 - this.birthYear;
-  }
-};
-
-console.log(jonas.calcAge(1991));
-//console.log(jonas['calcAge'](1991));
-
-
-function toCelsius(f) {
-  return (5/9) * (f-32);
-}
-
-let value = toCelsius;
 */
+
+// const jonas = {
+//  firstName: 'Jonas',
+//  lastName: 'Schmetdmann',
+//  birthYear: 1991,
+//  job: 'teacher',
+//  friends: ['Michael', 'Peter', 'Steven'],
+//  hasDriversLicense: false,
+
+//  // calcAge: function(birthYear) {
+//  //  return 2037 - birthYear;
+//  // }
+
+// //  calcAge: function() {
+// //   //console.log(this);
+// //     return 2037 - this.birthYear;
+// //   }
+// // };
+
+// calcAge: function() {
+//   this.age = 2037 - this.birthYear;
+//     return this.age;
+//   },
+
+//   getSummary: function() {
+//     return `${this.firstName} is a ${this.calcAge()}-year old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
+//   }
+// };
+
+
+// console.log(jonas.calcAge());
+
+// console.log(jonas.age);
+// console.log(jonas.age);
+// console.log(jonas.age);
+
+// //Challenge
+// // "Jonas is a 46-year old teacher, and he has a driver's license."
+
+// console.log(jonas.getSummary());
+
+
+// function toCelsius(f) {
+//   return (5/9) * (f-32);
+// }
+
+// let value = toCelsius;
+
 // function describeCountry(country, population, capitalCity) {
 //   return `${country} has ${population} million people and its capital city is ${capitalCity}.`;
 // }
@@ -403,5 +422,66 @@ let value = toCelsius;
 
 // 
 
-for (let voter = 1; voter <= 50; voter++)
-  console.log(`Voter number ${voter} is currently voting`);
+// for (let voter = 1; voter <= 50; voter++)
+//   console.log(`Voter number ${voter} is currently voting`);
+
+// var x = 10;
+// console.log(x);
+
+// Create objects for Mark and John
+// const mark = {
+//   fullName: "Mark Miller",
+//   mass: 78, // kg
+//   height: 1.69, // meters
+//   calcBMI: function() {
+//       this.bmi = this.mass / (this.height * this.height);
+//       return this.bmi;
+//   }
+// };
+
+// const john = {
+//   fullName: "John Smith",
+//   mass: 92, // kg
+//   height: 1.95, // meters
+//   calcBMI: function() {
+//       this.bmi = this.mass / (this.height * this.height);
+//       return this.bmi;
+//   }
+// };
+
+// // Calculate BMIs
+// mark.calcBMI();
+// john.calcBMI();
+
+// // Compare BMIs and log the result
+// if (mark.bmi > john.bmi) {
+//   console.log(`${mark.fullName}'s BMI (${mark.bmi.toFixed(1)}) is higher than ${john.fullName}'s (${john.bmi.toFixed(1)})!`);
+// } else if (john.bmi > mark.bmi) {
+//   console.log(`${john.fullName}'s BMI (${john.bmi.toFixed(1)}) is higher than ${mark.fullName}'s (${mark.bmi.toFixed(1)})!`);
+// } else {
+//   console.log(`${mark.fullName} and ${john.fullName} have the same BMI (${mark.bmi.toFixed(1)})!`);
+// }
+
+// console.log('Lifting weights repitition 1 🏋️‍♀️🏋️‍♀️.');
+// console.log('Lifting weights repitition 2 🏋️‍♀️🏋️‍♀️.');
+// console.log('Lifting weights repitition 3 🏋️‍♀️🏋️‍♀️.');
+// console.log('Lifting weights repitition 4 🏋️‍♀️🏋️‍♀️.');
+// console.log('Lifting weights repitition 5 🏋️‍♀️🏋️‍♀️.');
+// console.log('Lifting weights repitition 6 🏋️‍♀️🏋️‍♀️.');
+// console.log('Lifting weights repitition 7 🏋️‍♀️🏋️‍♀️.');
+// console.log('Lifting weights repitition 8 🏋️‍♀️🏋️‍♀️.');
+// console.log('Lifting weights repitition 9 🏋️‍♀️🏋️‍♀️.');
+// console.log('Lifting weights repitition 10 🏋️‍♀️🏋️‍♀️.');
+
+// for loops keep running while condition is true.
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repitition ${rep} 🏋️‍♀️🏋️‍♀️`);
+// }
+
+const jonasArray = [
+  'Jonas',
+  'Schmetdmann',
+  2037 - 1991,
+  'teacher',
+  ['Michael', 'Peter', 'Steven']
+ ];
